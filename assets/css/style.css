@@ -89,9 +89,10 @@ hr {
 }
 .group i {
   color: rgba(0, 0, 0, 0.5);
+  font-style: normal;
   position: absolute;
   left: 0.5rem;
-  bottom: 0.5rem;
+  bottom: 0.6rem;
 }
 .group [type=checkbox] {
   display: none;
@@ -121,9 +122,9 @@ hr {
   background-color: white;
   border: 0;
   border-radius: 0 0 3px 3px;
-  font-size: 1rem;
+  font-size: 0.75rem;
   padding: var(--padding);
-  padding-top: 0;
+  padding-top: calc(var(--padding) / 4);
   text-align: justify;
   white-space: pre-line;
 }
