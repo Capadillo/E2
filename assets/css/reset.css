@@ -9,6 +9,7 @@
   */
   * {
     margin: 0;
+    padding: 0;
   }
   /*
     3. Allow percentage-based heights in the application
@@ -22,7 +23,7 @@
     5. Improve text rendering
   */
   body {
-    line-height: 1.5;
+    line-height: 1;
     -webkit-font-smoothing: antialiased;
   }
   /*
@@ -49,4 +50,10 @@
   */
   #root, #__next {
     isolation: isolate;
+  }
+  /*
+    10. Remove underline from anchors
+  */
+  a {
+    text-decoration: none;
   }

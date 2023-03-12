@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@600&family=Roboto:wght@400;500;700&display=swap");
+
+:root {
+    --padding: 0.5rem;
+}
+
+html {
+    font-family: "Roboto", sans-serif;
+}
+
+main {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    margin: 0.5rem auto;
+    max-width: min(800px, 100% - 1rem);
+    overflow: hidden;
+}
+
+ul {
+    list-style: none;
+}
+
+section {
+    display: grid;
+    grid-gap: 0.5rem;
+    padding: 0 0.5rem;
+}
+
+hr {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 0;
+    border-radius: 3px;
+    display: block;
+    height: 0.5rem;
+}
+
+.tabs {
+    display: flex;
+
+    li {
+        flex-basis: calc(100% / 3);
+        flex-grow: 1;
+        flex-shrink: 0;
+    }
+
+    a {
+        background-color: rgba(0, 0, 0, 0.85);
+        color: white;
+        display: block;
+        padding: calc(var(--padding) * 3);
+        text-align: center;
+    }
+
+    & .ui-state-active a {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+}
+
+.group {
+    display: grid;
+    position: relative;
+
+    &:first-child {
+        margin-top: 0.5rem;
+    }
+
+    &:last-child {
+        margin-bottom: 0.5rem;
+    }
+
+    label {
+        background-color: white;
+        border: 0;
+        border-radius: 3px 3px 0 0;
+        color: rgba(0, 0, 0, 0.75);
+        font-size: 0.75rem;
+        font-weight: 500;
+        padding: var(--padding);
+        padding-bottom: 0;
+    }
+
+    input {
+        -moz-appearance: textfield;
+        background-color: white;
+        border: 0;
+        border-radius: 0 0 3px 3px;
+        font-size: 1rem;
+        padding: var(--padding);
+        padding-top: 0;
+        outline: none;
+        text-align: right;
+
+        &::-webkit-inner-spin-button,
+        &::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    }
+
+    i {
+        color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        left: 0.5rem;
+        bottom: 0.5rem;
+    }
+
+    [type=checkbox] {
+        display: none;
+
+        & + label {
+            border-radius: 3px;
+            min-height: calc(1.9375rem + (var(--padding) * 2));
+
+            & + i.true {
+                display: none;
+
+                & + i.false {
+                    display: block;
+                }
+            }
+        }
+
+        &:checked + label {
+            background-color: rgba(0, 0, 0, 0.75);
+            color: white;
+
+            & + i.true {
+                display: block;
+                color: white;
+
+                & + i.false {
+                    display: none;
+                }
+            }
+        }
+    }
+}
