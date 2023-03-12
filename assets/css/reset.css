@@ -1,0 +1,53 @@
+/* ----------------------------------------
+  Reset CSS
+---------------------------------------- */
+
+*,
+*::before,
+*::after
+{
+  box-sizing: border-box;
+}
+
+*
+{
+  font: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html
+{
+  color-scheme: light;
+}
+
+body
+{
+  min-height: 100vh;
+}
+
+img,
+picture,
+svg,
+video
+{
+  display: block;
+  max-width: 100%;
+}
+
+/* ----------------------------------------
+  Remove Spin Buttons from Number Input
+---------------------------------------- */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* ----------------------------------------
+  Basic Style
+---------------------------------------- */
