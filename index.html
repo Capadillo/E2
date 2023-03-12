@@ -14,12 +14,17 @@
               $( "#tabs" ).tabs();
             } );
         </script>
+        <link rel="stylesheet" href="./assets/css/reset.css">
         <style>
             @import url("https://fonts.googleapis.com/css2?family=Archivo:wght@600&family=Roboto:wght@400;500;700&display=swap");
             
+            *, *::before, *::after {
+                margin: 0;
+            }
+
             html {
-            font-family: "Roboto", sans-serif;
-            font-size: 1rem;
+                font-family: "Roboto", sans-serif;
+                font-size: 1rem;
             }
 
             :root {
@@ -80,6 +85,7 @@
                 font-family: "Font Awesome 5 Free";
                 left: 0.5rem;
                 position: absolute;
+                font-style: normal;
                 z-index: 1;
             }
 
@@ -113,6 +119,7 @@
             }
 
             .group input {
+                -moz-appearance: textfield;
                 background-color: white;
                 border: 0;
                 border-radius: 0 0 var(--radius-inner) var(--radius-inner);
@@ -124,6 +131,12 @@
                 text-align: right;
             }
 
+            .group input::-webkit-outer-spin-button,
+            .group input::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+
             .group [type=checkbox] {
                 display: none;
             }
@@ -131,7 +144,7 @@
             .group [type=checkbox] + label {
                 border-radius: var(--radius-inner);
                 cursor: pointer;
-                padding-bottom: 1.938rem;
+                min-height: 3.875rem;
             }
 
             .group [type=checkbox]:checked + label {
@@ -228,19 +241,19 @@
             <section id="tab-prices">
                 <div class="group">
                     <label for="igs-price">In Ground Station</label>
-                    <input type="number" id="igs-price">
+                    <input type="number" id="igs-price" min="0" value="19.26">
                     <i class="icon dollar"></i>
                 </div>
 
                 <div class="group">
                     <label for="ics-price">In Concrete Station</label>
-                    <input type="number" id="ics-price">
+                    <input type="number" id="ics-price" min="0" value="23.16">
                     <i class="icon dollar"></i>
                 </div>
 
                 <div class="group">
                     <label for="igs-price">Above Ground Station</label>
-                    <input type="number" id="ags-price">
+                    <input type="number" id="ags-price" min="0" value="97.69">
                     <i class="icon dollar"></i>
                 </div>
 
@@ -248,13 +261,13 @@
 
                 <div class="group">
                     <label for="duration-price">Duration</label>
-                    <input type="number" id="duration-price">
+                    <input type="number" id="duration-price" min="0" value="180">
                     <i class="icon dollar"></i>
                 </div>
 
                 <div class="group">
                     <label for="visits-price">Visits</label>
-                    <input type="number" id="visits-price">
+                    <input type="number" id="visits-price" min="0" value="220">
                     <i class="icon dollar"></i>
                 </div>
 
@@ -262,27 +275,37 @@
 
                 <div class="group">
                     <label for="tpi-price">Timber Pest Inspection</label>
-                    <input type="number" id="tpi-price">
+                    <input type="number" id="tpi-price" min="0" value="310">
                     <i class="icon dollar"></i>
                 </div>
 
                 <div class="group">
                     <label for="drill-price">Drill Hire</label>
-                    <input type="number" id="drill-price">
+                    <input type="number" id="drill-price" min="0" value="299">
                     <i class="icon dollar"></i>
                 </div>
 
                 <div class="group">
                     <label for="active-price">Active Site</label>
-                    <input type="number" id="active-price">
+                    <input type="number" id="active-price" min="0" value="450">
                     <i class="icon dollar"></i>
                 </div>
             </section>
 
             <section id="tab-proposal">
                 <div class="group">
-                    <input type="number" id="igs">
-                    <label for="igs">Price (incl. GST)</label>
+                    <label for="total-price">Price (incl. GST)</label>
+                    <input type="number" id="total-price">
+                </div>
+
+                <div class="group">
+                    <label for="total-price">Price (incl. GST)</label>
+                    <input type="number" id="total-price">
+                </div>
+
+                <div class="group">
+                    <label for="total-price">Price (incl. GST)</label>
+                    <input type="number" id="total-price">
                 </div>
             </section>
         </main>
