@@ -76,7 +76,7 @@ hr {
         font-size: 0.75rem;
         font-weight: 500;
         padding: var(--padding);
-        padding-bottom: 0;
+        padding-bottom: calc(var(--padding) / 3);
     }
 
     input {
@@ -110,7 +110,7 @@ hr {
 
         & + label {
             border-radius: 3px;
-            min-height: calc(1.9375rem + (var(--padding) * 2));
+            min-height: calc(1.9375rem + (var(--padding) / 3) + (var(--padding) * 2));
 
             & + i.true {
                 display: none;
@@ -142,7 +142,7 @@ hr {
         border-radius: 0 0 3px 3px;
         font-size: 0.75rem;
         padding: var(--padding);
-        padding-top: calc(var(--padding) / 4);
+        padding-top: 0;
         text-align: justify;
         white-space: pre-line;
     }
