@@ -117,3 +117,13 @@ hr {
 .group [type=checkbox]:checked + label + i.true + i.false {
   display: none;
 }
+.group blockquote {
+  background-color: white;
+  border: 0;
+  border-radius: 0 0 3px 3px;
+  font-size: 1rem;
+  padding: var(--padding);
+  padding-top: 0;
+  text-align: justify;
+  white-space: pre-line;
+}
