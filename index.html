@@ -4,15 +4,13 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="stylesheet" href="./assets/css/reset.css">
+        <title>Proposal Generator</title>
         <link rel="stylesheet" href="./assets/css/style.css">
     </head>
 
     <body>
         <header>
-            <h1>Exterra System</h1>
-            <p>Proposal Generator</p>
+            <h1>Proposal Generator</h1>
         </header>
 
         <main id="tabs">
@@ -77,14 +75,6 @@
                     <i class="fa-regular fa-circle-check true"></i>
                     <i class="fa-regular fa-circle false"></i>
                 </div>
-
-                <hr>
-
-                <div class="group">
-                    <label for="preview-price">Price (incl. GST)</label>
-                    <input type="number" id="preview-price" readonly>
-                    <i class="fa-solid fa-dollar"></i>
-                </div>
             </section>
 
             <section id="tab-prices">
@@ -143,74 +133,27 @@
 
             <section id="tab-proposal">
                 <div class="group">
-                    <label for="total-price">Price (incl. GST)</label>
-                    <blockquote>An Exterra Termite Baiting System will be installed around the perimeter of the structure. Each bait station will be placed no more than 3 meters apart, and will be checked every 8 weeks over a 12 month period.
-
-* If any stations become active during the 12 months: Termite bait will be added to the station and checks will increase in frequency to every 4 weeks until the activity has ceased.
-
-* If termites enter the structure: An above ground station will be placed at the point of activity and checked every 4 weeks until activity has ceased.
-
-Additional fees apply after the initial 12 month period. The fee will cover another 12 month period and will include a renewal of the baiting system as well as a timber pest inspection.</blockquote>
+                    <label>Overview</label>
+                    <blockquote id="overview"></blockquote>
                 </div>
 
                 <div class="group">
-                    <label for="total-price">Price (incl. GST)</label>
-                    <blockquote>The minimum number of stations to be installed are:
-
-* {igs} In Ground Station(s)
-* {ics} In Concrete Station(s)
-* {ags} Above Ground Station(s)
-
-Where in-ground stations are installed; a 120mm hole will be dug out and a bait station will be installed into the hole. The bait station includes a child-safe twist top lid. The station is designed to be flush with the ground to ensure no issues when mowing.
-
-If in-concrete stations are installed; an electric drill will be used to drill a hole approximately 78mm in diameter and a slip-resistant cap will be used to cover the hole. Additional costs for fair use of the drill are included. Access to water and electricity is required.
-
-If above-ground stations are used; a bait box will be installed to the affected areas using a variety of methods, including but not limited to liquid nails, screws, and black tape.</blockquote>
-                </div>
-
-                <div class="group">
-                    <label for="total-price">Price (incl. GST)</label>
-                    <input type="number" id="total-price" readonly>
+                    <label>Breakdown</label>
+                    <blockquote id="breakdown"></blockquote>
                 </div>
             </section>
         </main>
 
+        <footer>
+            <div class="group">
+                <label for="total-price">Price (incl. GST)</label>
+                <input type="number" id="total-price" readonly>
+            </div>
+        </footer>
+
         <script src="https://kit.fontawesome.com/ac03dc0c67.js" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
         <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-        <script>
-            function calculate() {
-                let total = 0;
-
-                $(['igs', 'ics', 'ags', 'duration', 'visits', 'tpi', 'drill', 'active']).each((id, field) => {
-                    let quantity = $("#" + field);
-                    let price    = $("#" + field + "-price");
-
-                    if (quantity.is(":checkbox")) {
-                        if (quantity.is(':checked')) {
-                            total += Number(price.val());
-                        }
-                    } else {
-                        total += Number(price.val()) * Number(quantity.val());
-                    }
-                });
-
-                return total.toFixed(2);
-            }
-
-            $(function() {
-                $("#tabs").tabs();
-
-                let total = calculate();
-                $('#preview-price').val(total);
-                $('#total-price').val(total);
-                
-                $('input').on('change', function(event) {
-                    let total = calculate();
-                    $('#preview-price').val(total);
-                    $('#total-price').val(total);
-                });
-            });
-        </script>
+        <script src="./assets/js/main.js"></script>
     </body>
 </html>
