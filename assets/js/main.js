@@ -95,12 +95,14 @@ $(function() {
     });
 
     update();
-    $("input").on('change', function(event) {
+    $("input").on('change keyup', function(event) {
         update();
     });
 
     $("blockquote").on('click', function() {
         const text = $(this).html();
         copyToClipboard(text);
+        $(this).animate({color: "#00000019"}, "slow");
+        $(this).animate({color: "#000000FF"}, "fast");
     });
 });
