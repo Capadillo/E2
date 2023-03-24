@@ -1,4 +1,4 @@
-import data from "./data2.js";
+import data from "./data/exterra.js";
 
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/service-worker.js');
