@@ -158,6 +158,17 @@ hr {
   padding: var(--padding);
   padding-bottom: calc(var(--padding) / 3);
 }
+.group label.checkbox {
+  border-radius: 3px;
+  min-height: calc(1.9375rem + var(--padding) / 3 + var(--padding) * 2);
+}
+.group label.checkbox.is-checked {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+}
+.group label.checkbox.is-checked + * + i {
+  color: white;
+}
 .group input {
   appearance: textfield;
   background-color: white;
@@ -173,36 +184,15 @@ hr {
   -webkit-appearance: none;
   margin: 0;
 }
+.group input[type=checkbox] {
+  display: none;
+}
 .group i {
   color: rgba(0, 0, 0, 0.5);
   font-style: normal;
   position: absolute;
   left: 0.5rem;
   bottom: 0.6rem;
-}
-.group [type=checkbox] {
-  display: none;
-}
-.group [type=checkbox] + label {
-  border-radius: 3px;
-  min-height: calc(1.9375rem + var(--padding) / 3 + var(--padding) * 2);
-}
-.group [type=checkbox] + label + i.true {
-  display: none;
-}
-.group [type=checkbox] + label + i.true + i.false {
-  display: block;
-}
-.group [type=checkbox]:checked + label {
-  background-color: rgba(0, 0, 0, 0.75);
-  color: white;
-}
-.group [type=checkbox]:checked + label + i.true {
-  display: block;
-  color: white;
-}
-.group [type=checkbox]:checked + label + i.true + i.false {
-  display: none;
 }
 .group blockquote {
   background-color: white;

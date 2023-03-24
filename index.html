@@ -15,130 +15,111 @@
 
         <main id="tabs">
             <ul class="tabs">
-                <li><a href="#tab-details">Details</a></li>
-                <li><a href="#tab-prices">Prices</a></li>
-                <li><a href="#tab-proposal">Proposal</a></li>
+                <li><a href="#details">Details</a></li>
+                <li><a href="#prices">Prices</a></li>
+                <li><a href="#proposal">Proposal</a></li>
             </ul>
 
-            <section id="tab-details">
+            <section id="details">
                 <div class="group">
                     <label for="igs">In Ground Station</label>
-                    <input type="number" id="igs" min="0" value="0">
-                    <i class="fa-solid fa-hashtag"></i>
+                    <input type="number" id="igs">
                 </div>
 
                 <div class="group">
                     <label for="ics">In Concrete Station</label>
-                    <input type="number" id="ics" min="0" value="0">
-                    <i class="fa-solid fa-hashtag"></i>
+                    <input type="number" id="ics">
                 </div>
 
                 <div class="group">
                     <label for="ags">Above Ground Station</label>
-                    <input type="number" id="ags" min="0" value="0">
-                    <i class="fa-solid fa-hashtag"></i>
+                    <input type="number" id="ags">
                 </div>
 
                 <hr>
 
                 <div class="group">
                     <label for="duration">Duration</label>
-                    <input type="number" id="duration" min="0" value="8">
-                    <i class="fa-solid fa-user-clock"></i>
+                    <input type="number" id="duration">
                 </div>
 
                 <div class="group">
                     <label for="visits">Visits</label>
-                    <input type="number" id="visits" min="0" value="5">
-                    <i class="fa-solid fa-users"></i>
+                    <input type="number" id="visits">
                 </div>
 
                 <hr>
 
                 <div class="group">
-                    <input type="checkbox" id="tpi">
                     <label for="tpi">Timber Pest Inspection</label>
-                    <i class="fa-regular fa-circle-check true"></i>
-                    <i class="fa-regular fa-circle false"></i>
+                    <input type="checkbox" id="tpi">
                 </div>
 
                 <div class="group">
-                    <input type="checkbox" id="drill">
                     <label for="drill">Drill Hire</label>
-                    <i class="fa-regular fa-circle-check true"></i>
-                    <i class="fa-regular fa-circle false"></i>
+                    <input type="checkbox" id="drill">
                 </div>
 
                 <div class="group">
-                    <input type="checkbox" id="active" checked>
                     <label for="active">Active Site</label>
-                    <i class="fa-regular fa-circle-check true"></i>
-                    <i class="fa-regular fa-circle false"></i>
+                    <input type="checkbox" id="active">
                 </div>
             </section>
 
-            <section id="tab-prices">
+            <section id="prices">
                 <div class="group">
                     <label for="igs-price">In Ground Station</label>
-                    <input type="number" id="igs-price" min="0" value="19.26">
-                    <i class="fa-solid fa-dollar"></i>
+                    <input type="number" id="igs-price">
                 </div>
 
                 <div class="group">
                     <label for="ics-price">In Concrete Station</label>
-                    <input type="number" id="ics-price" min="0" value="23.16">
-                    <i class="fa-solid fa-dollar"></i>
+                    <input type="number" id="ics-price">
                 </div>
 
                 <div class="group">
                     <label for="ags-price">Above Ground Station</label>
-                    <input type="number" id="ags-price" min="0" value="97.69">
-                    <i class="fa-solid fa-dollar"></i>
+                    <input type="number" id="ags-price">
                 </div>
 
                 <hr>
 
                 <div class="group">
                     <label for="duration-price">Duration</label>
-                    <input type="number" id="duration-price" min="0" value="180.00">
-                    <i class="fa-solid fa-dollar"></i>
+                    <input type="number" id="duration-price">
                 </div>
 
                 <div class="group">
                     <label for="visits-price">Visits</label>
-                    <input type="number" id="visits-price" min="0" value="220.00">
-                    <i class="fa-solid fa-dollar"></i>
+                    <input type="number" id="visits-price">
                 </div>
 
                 <hr>
 
                 <div class="group">
                     <label for="tpi-price">Timber Pest Inspection</label>
-                    <input type="number" id="tpi-price" min="0" value="310.00">
-                    <i class="fa-solid fa-dollar"></i>
+                    <input type="number" id="tpi-price">
                 </div>
 
                 <div class="group">
                     <label for="drill-price">Drill Hire</label>
-                    <input type="number" id="drill-price" min="0" value="299.00">
-                    <i class="fa-solid fa-dollar"></i>
+                    <input type="number" id="drill-price">
                 </div>
 
                 <div class="group">
                     <label for="active-price">Active Site</label>
-                    <input type="number" id="active-price" min="0" value="450.00">
-                    <i class="fa-solid fa-dollar"></i>
+                    <input type="number" id="active-price">
                 </div>
             </section>
 
-            <section id="tab-proposal">
+            <section id="proposal">
                 <div class="group">
-                    <label>Overview</label>
+                    <label for="overview">Overview</label>
                     <blockquote id="overview"></blockquote>
                 </div>
 
                 <div class="group">
-                    <label>Breakdown</label>
+                    <label for="breakdown">Breakdown</label>
                     <blockquote id="breakdown"></blockquote>
                 </div>
             </section>
@@ -147,14 +128,13 @@
         <footer>
             <div class="group">
                 <label for="total-price">Total Price (incl. GST)</label>
-                <input type="number" id="total-price" readonly>
-                <i class="fa-solid fa-dollar"></i>
+                <input type="number" id="total-price">
             </div>
         </footer>
 
-        <script src="https://kit.fontawesome.com/ac03dc0c67.js" crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-        <script src="./assets/js/main.js"></script>
+        <script src="./assets/js/vendor/jquery.js"></script>
+        <script src="./assets/js/vendor/jquery-ui.js"></script>
+        <script src="./assets/js/vendor/font-awesome.js"></script>
+        <script src="./assets/js/master.js" type="module"></script>
     </body>
 </html>
