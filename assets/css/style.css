@@ -123,8 +123,8 @@ footer .total small {
 footer .total p {
   display: inline;
 }
-footer .copyright {
-  font-size: 0.75rem;
+footer a {
+  display: block;
   text-align: center;
   padding: calc(var(--padding) * 2);
 }

@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Exterra Proposal Generator</title>
+        <title>Treated Zone Proposal Generator</title>
         <!-- browser -->
         <link rel="manifest" href="./manifest.json">
         <link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon" />
@@ -12,7 +12,7 @@
         <link rel="apple-touch-icon" href="./assets/images/icon-152.png">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="white">
-        <meta name="apple-mobile-web-app-title" content="Exterra Proposal Generator">
+        <meta name="apple-mobile-web-app-title" content="Treated Zone Proposal Generator">
         <!-- microsoft -->
         <meta name="msapplication-TileImage" content="./assets/images/icon-144.png">
         <meta name="msapplication-TileColor" content="#FFFFFF">
@@ -24,7 +24,7 @@
         <header>
             <img src="./assets/images/icon-512.png" alt="Capadillo.IO">
             <h1>
-                Exterra
+                Treated Zone
                 <small>Proposal Generator</small>
             </h1>
         </header>
@@ -38,18 +38,13 @@
 
             <section id="details">
                 <div class="group">
-                    <label for="igs">In Ground Station</label>
-                    <input type="number" id="igs">
+                    <label for="trenched">Trenched</label>
+                    <input type="number" id="trenched">
                 </div>
 
                 <div class="group">
-                    <label for="ics">In Concrete Station</label>
-                    <input type="number" id="ics">
-                </div>
-
-                <div class="group">
-                    <label for="ags">Above Ground Station</label>
-                    <input type="number" id="ags">
+                    <label for="drilled">Drilled</label>
+                    <input type="number" id="drilled">
                 </div>
 
                 <hr>
@@ -72,30 +67,20 @@
                 </div>
 
                 <div class="group">
-                    <label for="drill">Drill Hire</label>
-                    <input type="checkbox" id="drill">
-                </div>
-
-                <div class="group">
-                    <label for="active">Active Site</label>
-                    <input type="checkbox" id="active">
+                    <label for="hire">Drill Hire</label>
+                    <input type="checkbox" id="hire">
                 </div>
             </section>
 
             <section id="prices">
                 <div class="group">
-                    <label for="igs-price">In Ground Station</label>
-                    <input type="number" id="igs-price">
+                    <label for="trenched-price">Trenched</label>
+                    <input type="number" id="trenched-price">
                 </div>
 
                 <div class="group">
-                    <label for="ics-price">In Concrete Station</label>
-                    <input type="number" id="ics-price">
-                </div>
-
-                <div class="group">
-                    <label for="ags-price">Above Ground Station</label>
-                    <input type="number" id="ags-price">
+                    <label for="drilled-price">Drilled</label>
+                    <input type="number" id="drilled-price">
                 </div>
 
                 <hr>
@@ -118,13 +103,8 @@
                 </div>
 
                 <div class="group">
-                    <label for="drill-price">Drill Hire</label>
-                    <input type="number" id="drill-price">
-                </div>
-
-                <div class="group">
-                    <label for="active-price">Active Site</label>
-                    <input type="number" id="active-price">
+                    <label for="hire-price">Drill Hire</label>
+                    <input type="number" id="hire-price">
                 </div>
             </section>
 
@@ -146,13 +126,11 @@
                 <span>Total <small>Incl. GST</small></span>
                 <span>$<p id="total"></p></span>
             </div>
-
-            <a href="https://capadillo.github.io/E2/tz.html">Treated Zone (WIP)</a>
         </footer>
 
         <script src="./assets/js/vendor/jquery.js"></script>
         <script src="./assets/js/vendor/jquery-ui.js"></script>
         <script src="./assets/js/vendor/font-awesome.js"></script>
-        <script src="./assets/js/master.js" type="module"></script>
+        <script src="./assets/js/master-tz.js" type="module"></script>
     </body>
 </html>
