@@ -97,11 +97,15 @@ header p {
 main {
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 5px;
-  margin: 0.5rem auto;
+  margin: var(--padding) auto;
   max-width: min(800px, 100% - 1rem);
   overflow: hidden;
 }
 
+footer {
+  margin: var(--padding) auto;
+  max-width: min(800px, 100% - 1rem);
+}
 footer .total {
   background-color: #131313;
   border-radius: 5px;
@@ -110,8 +114,6 @@ footer .total {
   font-size: 0.875rem;
   font-weight: 500;
   justify-content: space-between;
-  margin: auto;
-  max-width: min(800px, 100% - 1rem);
   overflow: hidden;
   padding: calc(var(--padding) * 2);
 }
