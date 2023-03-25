@@ -22,7 +22,11 @@
 
     <body>
         <header>
-            <h1>Proposal Generator</h1>
+            <img src="./assets/images/icon-128.png" alt="Capadillo.IO">
+            <h1>
+                Exterra
+                <small>Proposal Generator</small>
+            </h1>
         </header>
 
         <main id="tabs">
@@ -138,10 +142,20 @@
         </main>
 
         <footer>
-            <div class="group">
-                <label for="total-price">Total Price (incl. GST)</label>
-                <input type="number" id="total-price">
-            </div>
+            <ul class="tabs">
+                <li><a>Total Price</a></li>
+            </ul>
+
+            <section>
+                <div class="group">
+                    <label for="total">Excluding GST</label>
+                    <input type="number" id="total">
+                </div>
+                <div class="group">
+                    <label for="total-gst">Including GST</label>
+                    <input type="number" id="total-gst">
+                </div>
+            </section>
         </footer>
 
         <script src="./assets/js/vendor/jquery.js"></script>

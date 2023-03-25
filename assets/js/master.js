@@ -85,7 +85,8 @@ function onUpdate() {
         }
     });
 
-    $('#total-price').val(total.toFixed(2));
+    $('#total').val(total.toFixed(2));
+    $('#total-gst').val((total * 1.1).toFixed(2));
 }
 
 $(function() {
